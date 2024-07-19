@@ -1249,6 +1249,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .project-img,
   .blog-banner-box { height: auto; }
+  video{
+    height: 50vh;
+  }
 
 }
 
@@ -1745,7 +1748,8 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { grid-template-columns: repeat(3, 1fr); }
+  .project-list { grid-template-columns: repeat(3, 1fr);  }
+;
 
 
 
