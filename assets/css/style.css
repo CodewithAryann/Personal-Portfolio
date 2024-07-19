@@ -1234,13 +1234,13 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
  @media (max-width:200px){
   .project-img{
-    height: 160vw;
+    height: 165vw;
   }
  }
 
  @media (max-width: 300px){
   .project-img{
-    height: 160vw;
+    height: 165vw;
   }
  }
 
