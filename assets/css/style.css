@@ -1247,15 +1247,16 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #PORTFOLIO, BLOG 
    */
 
-  .project-img,
-  .blog-banner-box { height: auto; }
-  video{
-    height: 50vh;
+  /* .project-img,
+  .blog-banner-box { height: auto; } */
+  figure.project-img{
+    height: 160vw;
+  }
+  #video-div{
+    height: 160vw;
   }
 
 }
-
-
 
 
 
