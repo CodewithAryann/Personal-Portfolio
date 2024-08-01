@@ -158,4 +158,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const videos = document.querySelectorAll('.project-video');
 
+  videos.forEach((video) => {
+    video.addEventListener('play', () => {
+      videos.forEach((vid) => {
+        if (vid !== video) {
+          vid.pause();
+        }
+      });
+    });
+  });
+});
