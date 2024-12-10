@@ -158,9 +158,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const videos = document.querySelectorAll('.project-video');
 
+  // Pause all videos when another video starts playing
   videos.forEach((video) => {
     video.addEventListener('play', () => {
       videos.forEach((vid) => {
@@ -170,7 +171,39 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  // Use IntersectionObserver to pause videos when their section is out of view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          const video = entry.target.querySelector('.project-video');
+          if (video && !video.paused) {
+            video.pause();
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Adjust threshold as needed
+    }
+  );
+
+  // Observe all sections that contain videos
+  const sections = document.querySelectorAll('.project-section'); // Ensure sections have this class
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Pause all videos when clicking on a navbar button
+  const navButtons = document.querySelectorAll('[data-nav-link]'); // Select buttons with data-nav-link
+  navButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      videos.forEach((video) => {
+        if (!video.paused) {
+          video.pause();
+        }
+      });
+    });
+  });
 });
-
-
-
