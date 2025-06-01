@@ -214,7 +214,7 @@
           <p>
             Motivated Computer Science student with hands-on experience in full-stack and DevOps development. Specialized in front-end technologies (React, Tailwind CSS), cloud platforms (AWS), and modern DevOps tools (Docker, Kubernetes, CI/CD). Proven ability to deliver scalable web solutions, automate workflows, and deploy applications using GitOps.  
           </p>
-          <a style="text-decoration: none;" class="about-link" href="assets/images/Aryan's-cv-1.pdf">
+          <a style="text-decoration: none;" class="about-link" href="assets/images/Aryan's-cv.pdf">
             <button class="about-btn">
               Download CV
             </button>
@@ -268,14 +268,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/cloud-computing-data-4-svgrepo-com.svg" alt="Web development icon" width="50">
+                <img src="./assets/images/data-science-svgrepo-com (1).svg" alt="Web development icon" width="50">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud Computing</h4>
+                <h4 class="h4 service-item-title">Data Scientist</h4>
 
                 <p class="service-item-text">
-                  Enabling flexible, reliable, and cost-effective solutions through virtualized cloud.
+                  Driving data-informed innovation by transforming raw data into actionable insights.
                 </p>
               </div>
 
@@ -557,17 +557,16 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Financify | Web Developer Internship </h4>
+              <h4 class="h4 timeline-item-title">Financify | Data Scientist Intern </h4>
 
               <span>May 2024 — Oct 2024</span>
 
               <p class="timeline-text">
-                •
-Boosted web performance by 95% through React optimization.
-•
-Reduced backend response time by 90%.
-•
-Collaborated with cross-functional teams to improve features and code reliability.              
+•	Conducted exploratory data analysis (EDA) and built visualizations using Python and Jupyter Notebook Reduced backend response time by 90%.
+•	Automated data preprocessing workflows, improving model readiness and reducing manual effort
+•	Built and evaluated machine learning models for classification tasks
+•	Presented actionable insights to the product team, influencing feature priorities
+             
               </p>
             
               
@@ -575,13 +574,14 @@ Collaborated with cross-functional teams to improve features and code reliabilit
             </li>
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Code Soft | Front-end Web Developer Internship</h4>
+              <h4 class="h4 timeline-item-title">Code Soft | Web Developer Intern</h4>
 
               <span>Jan 2024 – April 2024 </span>
 
               <p class="timeline-text">
-                • Developed responsive web pages with HTML, CSS, and JavaScript
-                • Built UI components in React to enhance interactivity and Optimized code for better performance         
+                •	Increased site performance by 95% through optimized React practices
+•	Reduced backend latency by 90%
+•	Delivered production-ready features in cross-functional sprints      
               </p>
 
             </li>
@@ -638,7 +638,7 @@ Collaborated with cross-functional teams to improve features and code reliabilit
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Cloud Computing</h5>
+                <h5 class="h5">Data scientist</h5>
                 <data value="88">88%</data>
               </div>
 
@@ -896,26 +896,21 @@ Collaborated with cross-functional teams to improve features and code reliabilit
             </li>
             
 
-            <li class="project-item  active" data-filter-item data-category="graphic design">
-              <a>
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Travel-Poster.png" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Poster</h3>
-
-                <p class="project-category">Graphic design</p>
-
-              </a>
-            </li> 
+            <li class="project-item active" data-filter-item data-category="graphic design">
+  <a href="javascript:void(0);" onclick="openModal('./assets/images/Travel-Poster.png')">
+    <figure class="project-img">
+      <div class="project-item-icon-box">
+        <ion-icon name="eye-outline"></ion-icon>
+      </div>
+      <img src="./assets/images/Travel-Poster.png" alt="Poster" loading="lazy">
+    </figure>
+    <h3 class="project-title">Poster</h3>
+    <p class="project-category">Graphic design</p>
+  </a>
+</li>
 
             <li class="project-item  active" data-filter-item data-category="graphic design">
-              <a>
+              <a href="javascript:void(0);" onclick="openModal('./assets/images/logo design.png')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -933,7 +928,7 @@ Collaborated with cross-functional teams to improve features and code reliabilit
             </li>
 
             <li class="project-item  active" data-filter-item data-category="graphic design">
-              <a>
+              <a href="javascript:void(0);" onclick="openModal('./assets/images/student factory-poster .png')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -951,7 +946,7 @@ Collaborated with cross-functional teams to improve features and code reliabilit
             </li>
 
             <li class="project-item  active" data-filter-item data-category="graphic design">
-              <a>
+              <a href="javascript:void(0);" onclick="openModal('./assets/images/logo.png')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -986,6 +981,11 @@ Collaborated with cross-functional teams to improve features and code reliabilit
               </a>
             </li>
           </ul>
+          <!-- Modal -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
 
         </section>
 

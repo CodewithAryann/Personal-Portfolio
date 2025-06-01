@@ -207,3 +207,51 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+
+  function openModal(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+
+  // Optional: Close modal on outside click
+  window.onclick = function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent actual form submission
+    
+    const fullname = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!fullname || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Format message text
+    const text = `Name: ${fullname}%0AEmail: ${email}%0AMessage: ${message}`;
+
+    // Put your WhatsApp phone number here (with country code, no + or 00)
+    // Example: '971501234567' for UAE number
+    const phoneNumber = '0562339323';
+
+    // WhatsApp URL
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+
+    // Open WhatsApp in new tab/window
+    window.open(whatsappURL, '_blank');
+  });
