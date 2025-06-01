@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Put your WhatsApp phone number here (with country code, no + or 00)
     // Example: '971501234567' for UAE number
-    const phoneNumber = '+971562339323';
+    const phoneNumber = '971562339323';
 
     // WhatsApp URL
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
